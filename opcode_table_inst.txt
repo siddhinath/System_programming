@@ -1,0 +1,66 @@
+std
+FD std std
+
+lodsb
+AC lodsb lodsb
+
+stosb
+AA stosb stosb
+
+cld
+FC cld cld
+
+sub
+2C r8 imm8
+2D r16 imm16
+2D r32 imm32
+80 m8 imm8
+81 m16 imm16
+81 m32 imm32
+28 r8 r8
+29 r16 r16
+2A r8 m8
+2B r16 m16
+2B r32 r32
+
+xor 
+31 r32 r32
+
+add
+04 r8 imm8
+05 r16 imm16
+05 r32 imm32
+80 r8 imm8
+80 m8 imm8
+81 r16 imm16
+81 r32 imm32
+83 r16 imm8
+83 m16 imm8
+83 r32 imm8
+83 m32 imm8
+00 r8 r8
+01 r16 r16
+01 m16 r16
+01 r32 r32
+01 m32 r32
+02 r8 m8
+03 r16 m16
+03 r32 m32
+
+mov
+BF r32 m8 
+88 r8 r8
+88 m8 r8
+89 r16 r16
+89 m16 r16
+89 r32 r32
+89 m32 r32
+8A r8 m8
+B8 r16 m16
+B8 r32 m32
+B0+ r8 imm8
+B8 r16 imm16
+B8 r32 imm32
+C6 m8 imm8
+C7 m16 imm16
+C7 m32 imm32

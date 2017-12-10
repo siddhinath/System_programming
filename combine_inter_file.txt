@@ -1,0 +1,72 @@
+1	abc	db	"10",10,0	
+2	as	dd	12,13,14,15,16	
+3	str1	db	"sid",10,0	
+4	i	dd	500	
+
+6			mov	eax,%1	
+7			mov	ebx,%2	
+8			add	eax,ebx	
+9	%macro	sid	2	
+10			sub	ecx,edx	
+11	%macro	kharade	2	
+12			add	eax,ebx	
+13	%macro	nested	3	
+14			mov	ecx,edx	
+15			%endmacro	
+16	%macro	nested	2	
+17			sub	esi,edi	
+18			mov	ecx,edx	
+19			%endmacro	
+20			sub	ecx,edx	
+21			%endmacro	
+22			mul	esi,edi	
+23	%macro	kharade	3	
+24			mov	esi,edi	
+25			%endmacro	
+26			%endmacro	
+27			sid	1,2	
+28			%%lp:	
+29			add	eax,ebx	
+30			sub	edx,ecx	
+31			jmp	%%lp	
+32			sub	eax,ebx	
+
+34			
+35			db	"kharade",10,0	
+36			.bss	
+37			resd	30	
+38			resb	30	
+39			.text	
+40			main	
+41			
+42			edx,dword[i]	
+43			ebx,'a'	
+44			eax,dword[ebx]	
+45			eax,str1	
+46			esi,str1	
+47			edi,str2	
+48			edi,str1	
+49			esi,str1	
+50			edi,str2	
+51			esi,str2	
+52			esi,'a'	
+53			edi,'a'	
+54			esi,edi	
+55			
+56			
+57			eax,ebx	
+58			ecx,'a'	
+59			ebx,12	
+60			eax,ebx	
+61			eax,ebx	
+62			
+63			esi,12	
+
+65			eax,ebx	
+66			ecx,'a'	
+67			ebx,12	
+68			eax,ebx	
+69			eax,ebx	
+70			
+71			esi,12	
+

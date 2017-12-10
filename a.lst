@@ -1,0 +1,22 @@
+16220 create by siddhinath kharade
+1				section .data
+2	00000000	25640		str1 db "%d",0
+3				section .text
+4				extern printf
+5				global main
+6				main:
+7	00000000	31C9		xor ecx,ecx
+8	00000002	B8B0000000		mov eax,11
+9	00000004	B816000000		mov ebx,22
+10	00000006	01D8		add eax,ebx
+11	00000008	2BD1		sub ecx,edx
+12				mul esi,edi
+13				%%lpxyz@2:
+14	00000010	01D8		add eax,ebx
+15	00000012	2BCA		sub edx,ecx
+16				jmp %%lpxyz@2
+17	00000014	2BD8		sub eax,ebx
+18	00000016	FD		std
+19	00000017	AC		lodsb
+20				
+21				
